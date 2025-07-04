@@ -6,7 +6,7 @@ function App() {
   const [city, setCity] = useState('');
   // const [result, setResult] = useState('');
   const [celsius, setCelsius] = useState('');
-  // const [fahrenheit, setFahrenheit] = useState('');
+  const [fahrenheit, setFahrenheit] = useState('');
   const changeHandler = e => {
     setCity(e.target.value);
   }
@@ -19,8 +19,8 @@ function App() {
       const kelvin = data.main.temp;
       const celsius = kelvin - 273.15;
       const fahrenheit = (celsius * 9/5) + 32;
-      setCelsius("Tempature at" + " " + city + " " + "is" + " " + Math.round(celsius) + " " + "°C");
-      // setFahrenheit(fahrenheit);
+      setCelsius("Tempature at" + " " + city + " " + "is" + " " + Math.round(celsius) + " " + "°C" + " " + "or" + " " + Math.round(fahrenheit) + " " + "°F");
+      setFahrenheit(fahrenheit);
     })
   }
 
@@ -35,7 +35,7 @@ function App() {
         <form onSubmit={submitHandler} className="space-y-4">
           <input type="text" value={city} onChange={changeHandler} placeholder="e.g., Tirupati" className="w-full px-4 py-2 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-700"/>
           <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 cursor-pointer text-white font-semibold py-2 rounded-lg transition duration-300">
-            Get Temperature
+            🌡️ Get Temperature 
           </button>
         </form>
         {celsius && (
