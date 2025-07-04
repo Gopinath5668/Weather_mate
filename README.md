@@ -10,7 +10,8 @@ A simple React application to check the current temperature of any city using th
 
 ## Demo
 
-![Screen Shot of Weather mate webpage](image.png)
+![Screen Shot of Weather mate webpage]
+![Weather-mate](https://github.com/user-attachments/assets/2805623e-70ea-447e-ae02-03f8877556c6)
 
 ## Getting Started
 
